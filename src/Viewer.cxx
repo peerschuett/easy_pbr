@@ -217,7 +217,7 @@ bool Viewer::init_params_nongl(const std::string config_file){
     Scene::set_floor_visible(floor_visible);
     Scene::set_floor_metric(floor_metric);
     Scene::set_automatic_normal_calculation(automatic_normal_calculation);
-
+    m_new_cloud = false;
 
 
     // //ssao
@@ -3001,6 +3001,11 @@ void Viewer::glfw_key(GLFWwindow* window, int key, int scancode, int action, int
 
     }else if(action == GLFW_RELEASE){
 
+    }
+    
+    if (key == GLFW_KEY_N && modifier==GLFW_MOD_CONTROL && action == GLFW_PRESS){
+        VLOG(1) << "Pressed ctrl-n, visualizing next cloud in the Dataloader";
+        m_new_cloud = true;
     }
 
     //handle ctrl c and ctrl v for camera pose copying and pasting

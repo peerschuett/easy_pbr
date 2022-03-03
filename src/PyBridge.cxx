@@ -387,6 +387,7 @@ PYBIND11_MODULE(easypbr, m) {
     .def_readwrite("m_nr_drawn_frames", &Viewer::m_nr_drawn_frames )
     .def_readwrite("m_background_color", &Viewer::m_background_color )
     .def_readwrite("m_gui", &Viewer::m_gui )
+    .def_readwrite("m_new_cloud", &Viewer::m_new_cloud )
     ;
 
     //Gui

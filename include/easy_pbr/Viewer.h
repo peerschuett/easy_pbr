@@ -334,6 +334,7 @@ public:
     bool m_record_gui;
     bool m_record_with_transparency;
 
+    bool m_new_cloud;
 
     //camera speed multiplier
     float m_camera_translation_speed_multiplier;
